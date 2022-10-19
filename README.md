@@ -1,21 +1,9 @@
 # UT guideline
 
-## Scenarios
+## Requirements
 
-### Free functions / C-like APIs
-
-- interface
-- templates
-
-### Testing private methods
-
-- public fun -> private fun
-- public members
-- FRIEND_TEST -> does not work in production
-
-### Injecting mock in a class
-
-### Timers
+CMake: sudo apt install cmake
+Boost Libraries: sudo apt install libboost-all-dev
 
 ## Commands
 
@@ -30,3 +18,16 @@ cmake --build build
 ```bash
 cd build && ctest
 ```
+
+## Scenarios
+
+### Testing private methods
+
+### Free functions / C-like APIs
+
+- interface
+- templates
+
+### Injecting mock in a class
+
+### Timers
