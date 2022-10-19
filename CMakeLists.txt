@@ -50,3 +50,25 @@ target_link_libraries(
     GTest::gmock_main
 )
 gtest_discover_tests(private_methods)
+
+add_executable(
+    mock_injection
+    src/mock_injection.cc
+)
+target_link_libraries(
+    mock_injection
+    GTest::gtest_main
+    GTest::gmock_main
+)
+gtest_discover_tests(mock_injection)
+
+add_executable(
+    timers
+    src/timers.cc
+)
+target_link_libraries(
+    timers
+    GTest::gtest_main
+    GTest::gmock_main
+)
+gtest_discover_tests(timers)

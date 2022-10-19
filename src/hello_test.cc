@@ -1,4 +1,5 @@
 #include <vector>
+#include <numeric>
 
 #include <gtest/gtest.h>
 #include <boost/array.hpp>
@@ -58,4 +59,9 @@ protected:
 TEST_F(MyFixture, MyTest)
 {
     EXPECT_EQ(4, x.size());
+}
+
+TEST_F(MyFixture, MyTestSum)
+{
+    EXPECT_LT(40, std::accumulate(x.begin(), x.end(), 0));
 }
