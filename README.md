@@ -2,8 +2,14 @@
 
 ## Requirements
 
-CMake: sudo apt install cmake
-Boost Libraries: sudo apt install libboost-all-dev
+CMake:
+```bash
+(sudo) apt install cmake
+```
+Boost Libraries
+```bash
+(sudo) apt install libboost-all-dev
+```
 
 ## Commands
 
