@@ -5,11 +5,11 @@
 
 #include "mock_injection.h"
 
-//    ____ ___  ____  _____ 
-//   / ___/ _ \|  _ \| ____|
-//  | |  | | | | | | |  _|  
-//  | |__| |_| | |_| | |___ 
-//   \____\___/|____/|_____|
+//   ____  ____   ___  ____  _   _  ____ _____ ___ ___  _   _ 
+//  |  _ \|  _ \ / _ \|  _ \| | | |/ ___|_   _|_ _/ _ \| \ | |
+//  | |_) | |_) | | | | | | | | | | |     | |  | | | | |  \| |
+//  |  __/|  _ <| |_| | |_| | |_| | |___  | |  | | |_| | |\  |
+//  |_|   |_| \_\\___/|____/ \___/ \____| |_| |___\___/|_| \_|
 
 BoostAPI::BoostAPI(const IoPtr& io) : resolver_(*io), socket_(*io)
 {
@@ -54,7 +54,7 @@ void Client::handleResolve(boost::system::error_code ec, tcp::resolver::results_
     std::cout << __FUNCTION__ << "\n";
     if (ec)
     {
-        std::cout << "Oops, I received ec: " << ec.message() << "\n";
+        std::cerr << "Oops, I received ec: " << ec.message() << "\n";
         return;
     }
 
@@ -66,7 +66,7 @@ void Client::handleConnect(boost::system::error_code ec, const tcp::endpoint& en
     std::cout << __FUNCTION__ << "\n";
     if (ec)
     {
-        std::cout << "Oops, I received ec: " << ec.message() << "\n";
+        std::cerr << "Oops, I received ec: " << ec.message() << "\n";
         return;
     }
     std::cout << "I connected to: " << endpoint << "\n";

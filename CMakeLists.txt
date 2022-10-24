@@ -65,6 +65,7 @@ gtest_discover_tests(mock_injection)
 add_executable(
     timers
     src/timers.cc
+    src/timers2.cc
 )
 target_link_libraries(
     timers
